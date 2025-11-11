@@ -1,0 +1,17 @@
+# ignore - from previous project, used for convenience 
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /var/www/html/app
+    volumes:
+      - .:/var/www/html
+      - app_vendor:/var/www/html/app/vendor
+    command: ["sh", "/usr/local/bin/entrypoint.sh"]
+    ports:
+      - "8000:8000"
+
+volumes:
+  app_vendor:
