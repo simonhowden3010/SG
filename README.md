@@ -30,6 +30,8 @@ In a separate terminal, in the root directory of the repo, you can run:
 ## Running the parser example
 * ./scripts/artisan csv:write storage/examples.csv storage/output.csv
 
+output.csv should now be in the storage folder (next to examples.csv)
+
 ### Code notes
 The majority of the important code is in the service (App/Services/PeopleService). I use a service 'people' with a console command (Console/ReadCSV) and I use PHPUnit for the tests. 
 
