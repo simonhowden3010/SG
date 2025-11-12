@@ -1,11 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CSVToPeopleController;
+use App\Http\Controllers\JSONToPeopleController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-// CSV Endpoint
-Route::post('/people/import', [CSVToPeopleController::class, 'import']);
