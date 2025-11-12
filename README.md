@@ -14,21 +14,21 @@ There should be no need to create a .env file manually
 
 There is some left over files from the scoffolding done by laravel (e.g. a user model) and because of the speedy docker solution there is a nested app directory (in a proper project this would be fixed to the root directory).
 
-Run:
-./scripts/build
+In a terminal, in the root directory of the repo, you can run:
+* ./scripts/build
 
-You can test laravel is running in the browser:
-http://0.0.0.0:8000
+A server should now be running ready to accept the artisan command
 
 I keep the examples.csv file in the storage folder, and output the output.csv also to the storage folder
 
 I also assume we should output all people but just leave missing names etc as a blank 'cell' if it were opened in sheets
 
 ## Running the unit test
+In a separate terminal, in the root directory of the repo, you can run:
 * ./scripts/artisan test
 
 ## Running the parser example
-./scripts/artisan csv:write storage/examples.csv storage/output.csv
+* ./scripts/artisan csv:write storage/examples.csv storage/output.csv
 
 ### Code notes
 The majority of the important code is in the service (App/Services/PeopleService). I use a service 'people' with a console command (Console/ReadCSV) and I use PHPUnit for the tests. 
